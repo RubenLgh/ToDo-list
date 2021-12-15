@@ -10,10 +10,14 @@ import UIKit
 class ToDo: NSObject {
     var nom = String()
     var desc = String()
-
-    init(nom : String, desc : String){
+    var date = Date()
+    var valide = Bool()
+    
+    init(nom : String, desc : String, date : Date){
         self.nom = nom
         self.desc = desc
+        self.date = date
+        valide = false
     }
     
     

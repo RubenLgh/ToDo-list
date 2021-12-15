@@ -1,18 +1,16 @@
 //
-//  TableViewCell.swift
+//  CategorieTableViewCell.swift
 //  ToDoList
 //
-//  Created by Ruben Laghouati on 03/12/2021.
+//  Created by Ruben Laghouati on 15/12/2021.
 //
 
 import UIKit
 
-class TableViewCell: UITableViewCell {
+class CategorieTableViewCell: UITableViewCell {
+    
 
-    @IBOutlet weak var titre: UILabel!
-    @IBOutlet weak var desc: UILabel!
-    @IBOutlet weak var date: UILabel!
-    @IBOutlet weak var boutonValider: UIButton!
+    @IBOutlet weak var categorie: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

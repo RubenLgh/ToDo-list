@@ -11,6 +11,7 @@ class ViewController: UIViewController, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return taches.count
     }
+    let affichageDate = DateFormatter()
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cellContent", for: indexPath) as! TableViewCell
@@ -18,7 +19,29 @@ class ViewController: UIViewController, UITableViewDataSource {
         cell.titre.text = taches[row].nom
         cell.desc.text = taches[row].desc
         
+        cell.boutonValider.tag = row
+        
+
+        affichageDate.dateStyle = .medium
+        affichageDate.timeStyle = .medium
+        affichageDate.locale = Locale(identifier: "FR-fr")
+        cell.date.text = affichageDate.string(from: taches[row].date)
+        
+        if(taches[row].valide){
+            cell.boutonValider.setTitle("✅", for: .normal)
+        }else{
+            cell.boutonValider.setTitle("☑️", for: .normal)
+        }
         return cell
+    }
+    
+    
+    @IBAction func valider(_ sender: UIButton) {
+        
+        let row = sender.tag
+        
+        taches[row].valide = !taches[row].valide
+        tableView.reloadData()
     }
     
 
@@ -26,10 +49,9 @@ class ViewController: UIViewController, UITableViewDataSource {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        taches = [ToDo(nom :"Faire les courses",desc: "aliment 1, aliment 2"),ToDo(nom :"Faire les courses",desc: "aliment 1, aliment 2"),ToDo(nom :"Faire les courses",desc: "aliment 1, aliment 2")]
         tableView.dataSource = self
     }
+    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "afficherDetail"{
@@ -48,7 +70,8 @@ class ViewController: UIViewController, UITableViewDataSource {
     
     @IBAction func ajouterTache(unwindSegue: UIStoryboardSegue) {
         if let destination = unwindSegue.source as? NouvelleTacheViewController{
-            taches.append(ToDo(nom : destination.nom.text!, desc: destination.desc.text!))
+            taches.append(ToDo(nom : destination.nom.text!, desc: destination.desc.text!, date: destination.date.date))
+            taches.sort(by: { (e1,e2) -> Bool in return e1.date < e2.date})
             tableView.reloadData() 
         }
     }

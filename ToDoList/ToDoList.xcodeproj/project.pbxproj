@@ -17,6 +17,10 @@
 		0DE45D0C275A4C2800EC4045 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE45D0B275A4C2800EC4045 /* TableViewCell.swift */; };
 		0DE45D0F275A59B200EC4045 /* DescViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE45D0E275A59B200EC4045 /* DescViewController.swift */; };
 		0DE45D12275A637300EC4045 /* NouvelleTacheViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE45D11275A637300EC4045 /* NouvelleTacheViewController.swift */; };
+		0DFA74352769EB4600BFC40B /* CategorieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DFA74342769EB4600BFC40B /* CategorieViewController.swift */; };
+		0DFA74382769EB6400BFC40B /* ToDoList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DFA74372769EB6400BFC40B /* ToDoList.swift */; };
+		0DFA743B2769EEA800BFC40B /* CategorieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DFA743A2769EEA800BFC40B /* CategorieTableViewCell.swift */; };
+		0DFA743F2769FBC900BFC40B /* NouvelleCategorieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DFA743E2769FBC900BFC40B /* NouvelleCategorieViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +36,10 @@
 		0DE45D0B275A4C2800EC4045 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		0DE45D0E275A59B200EC4045 /* DescViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescViewController.swift; sourceTree = "<group>"; };
 		0DE45D11275A637300EC4045 /* NouvelleTacheViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NouvelleTacheViewController.swift; sourceTree = "<group>"; };
+		0DFA74342769EB4600BFC40B /* CategorieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategorieViewController.swift; sourceTree = "<group>"; };
+		0DFA74372769EB6400BFC40B /* ToDoList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoList.swift; sourceTree = "<group>"; };
+		0DFA743A2769EEA800BFC40B /* CategorieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategorieTableViewCell.swift; sourceTree = "<group>"; };
+		0DFA743E2769FBC900BFC40B /* NouvelleCategorieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NouvelleCategorieViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,12 +77,16 @@
 				0DE45CEF275A42FA00EC4045 /* ViewController.swift */,
 				0DE45D0E275A59B200EC4045 /* DescViewController.swift */,
 				0DE45D08275A46AC00EC4045 /* ToDo.swift */,
-				0DE45CF1275A42FA00EC4045 /* Main.storyboard */,
 				0DE45D11275A637300EC4045 /* NouvelleTacheViewController.swift */,
+				0DE45CF1275A42FA00EC4045 /* Main.storyboard */,
 				0DE45D0B275A4C2800EC4045 /* TableViewCell.swift */,
 				0DE45CF4275A430000EC4045 /* Assets.xcassets */,
 				0DE45CF6275A430000EC4045 /* LaunchScreen.storyboard */,
 				0DE45CF9275A430000EC4045 /* Info.plist */,
+				0DFA74342769EB4600BFC40B /* CategorieViewController.swift */,
+				0DFA74372769EB6400BFC40B /* ToDoList.swift */,
+				0DFA743A2769EEA800BFC40B /* CategorieTableViewCell.swift */,
+				0DFA743E2769FBC900BFC40B /* NouvelleCategorieViewController.swift */,
 			);
 			path = ToDoList;
 			sourceTree = "<group>";
@@ -150,12 +162,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				0DE45D0C275A4C2800EC4045 /* TableViewCell.swift in Sources */,
+				0DFA74382769EB6400BFC40B /* ToDoList.swift in Sources */,
 				0DE45D12275A637300EC4045 /* NouvelleTacheViewController.swift in Sources */,
+				0DFA74352769EB4600BFC40B /* CategorieViewController.swift in Sources */,
 				0DE45D0F275A59B200EC4045 /* DescViewController.swift in Sources */,
 				0DE45CF0275A42FA00EC4045 /* ViewController.swift in Sources */,
 				0DE45CEC275A42FA00EC4045 /* AppDelegate.swift in Sources */,
 				0DE45CEE275A42FA00EC4045 /* SceneDelegate.swift in Sources */,
 				0DE45D09275A46AC00EC4045 /* ToDo.swift in Sources */,
+				0DFA743F2769FBC900BFC40B /* NouvelleCategorieViewController.swift in Sources */,
+				0DFA743B2769EEA800BFC40B /* CategorieTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

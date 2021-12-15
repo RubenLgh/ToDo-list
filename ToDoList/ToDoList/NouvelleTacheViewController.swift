@@ -15,6 +15,9 @@ class NouvelleTacheViewController:
     
     @IBOutlet weak var desc: UITextField!
     
+    
+    @IBOutlet weak var date: UIDatePicker!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
